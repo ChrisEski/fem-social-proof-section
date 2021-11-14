@@ -1,0 +1,27 @@
+.stars {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 15px 75px;
+  text-align: center;
+  background-color: $clr-magenta-400;
+  border-radius: 8px;
+
+  &__icon {
+    margin: 0px 4px 10px 0px;
+
+    &--last {
+      // margin-bottom: 16px;
+      margin-right: 0;
+    }
+  }
+
+  &__description {
+    font-size: 13px;
+    font-weight: $fw-700;
+    color: $clr-magenta-900;
+  }
+
+  &--last {
+    margin-bottom: 49px;
+  }
+}

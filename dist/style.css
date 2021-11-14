@@ -57,7 +57,7 @@ span {
   margin: 80px 24px 20px;
 }
 
-.container .intro__title {
+.intro__title {
   margin-bottom: 24px;
   text-align: center;
   font-size: 40px;
@@ -65,7 +65,7 @@ span {
   color: #502050;
 }
 
-.container .intro_subtitle {
+.intro_subtitle {
   font-size: 16px;
   text-align: center;
   color: #937b92;
@@ -73,7 +73,7 @@ span {
   line-height: 1.7;
 }
 
-.container .stars {
+.stars {
   width: 100%;
   margin-bottom: 16px;
   padding: 15px 75px;
@@ -82,25 +82,25 @@ span {
   border-radius: 8px;
 }
 
-.container .stars__icon {
+.stars__icon {
   margin: 0px 4px 10px 0px;
 }
 
-.container .stars__icon--last {
+.stars__icon--last {
   margin-right: 0;
 }
 
-.container .stars__description {
+.stars__description {
   font-size: 13px;
   font-weight: 700;
   color: #502050;
 }
 
-.container .stars--last {
+.stars--last {
   margin-bottom: 49px;
 }
 
-.container .card {
+.card {
   padding: 37px 30px;
   background-color: #502050;
   color: white;
@@ -108,14 +108,14 @@ span {
   border-radius: 8px;
 }
 
-.container .card__info {
+.card__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 28px;
 }
 
-.container .card__img {
+.card__img {
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -123,30 +123,30 @@ span {
   margin-right: 23px;
 }
 
-.container .card__img img {
+.card__img img {
   width: 40px;
   height: 40px;
 }
 
-.container .card__person .person__name {
+.card__person .person__name {
   display: block;
   font-weight: 700;
   margin-bottom: 3px;
   color: #f7f2f7;
 }
 
-.container .card__person .person__status {
+.card__person .person__status {
   display: block;
   color: #cb7cae;
 }
 
-.container .card__text {
+.card__text {
   font-weight: 500;
   color: #f7f2f7;
   line-height: 1.7;
 }
 
-.container .card--last {
+.card--last {
   margin-bottom: 0px;
 }
 
