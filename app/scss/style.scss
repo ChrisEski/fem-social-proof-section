@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'global';
+@import 'stars';
+@import 'reviews';
+
+.container {
+  .intro__title {
+  }
+
+  .intro__subtitle {
+  }
+
+  .stars__box {
+    &__icon {
+    }
+
+    &__description {
+    }
+  }
+
+  .card {
+    &__info {
+    }
+
+    &__img {
+      img {
+      }
+    }
+
+    &__person {
+      .person__name {
+      }
+
+      .person__status {
+      }
+    }
+
+    &__text {
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
