@@ -1,13 +1,22 @@
 .stars {
-  width: 100%;
-  margin-bottom: 16px;
-  padding: 15px 75px;
-  text-align: center;
-  background-color: $clr-magenta-400;
-  border-radius: 8px;
+  // border: 1px solid red;
+  margin-bottom: 50px;
+  &__card {
+    // border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 15px 50px;
+    background-color: $clr-magenta-400;
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+    &--last {
+      margin-bottom: 0;
+    }
+  }
 
   &__icon {
-    margin: 0px 4px 10px 0px;
+    margin-right: 3px;
 
     &--last {
       // margin-bottom: 16px;
@@ -19,9 +28,10 @@
     font-size: 13px;
     font-weight: $fw-700;
     color: $clr-magenta-900;
+    margin-top: 10px;
   }
 
   &--last {
-    margin-bottom: 49px;
+    // margin-bottom: 49px;
   }
 }
