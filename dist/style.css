@@ -48,6 +48,24 @@ body {
   min-height: 100vh;
 }
 
+@media (min-width: 1080px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 p,
 span {
   font-size: 15px;
@@ -55,6 +73,12 @@ span {
 
 .container {
   margin: 80px 24px 20px;
+}
+
+@media (min-width: 1080px) {
+  .container {
+    margin: 120px 160px 20px;
+  }
 }
 
 .intro__title {
@@ -77,7 +101,7 @@ span {
   margin-bottom: 50px;
 }
 
-.stars__card {
+.stars__box {
   width: 100%;
   text-align: center;
   padding: 15px 50px;
@@ -86,7 +110,7 @@ span {
   border-radius: 8px;
 }
 
-.stars__card--last {
+.stars__box--last {
   margin-bottom: 0;
 }
 
@@ -105,7 +129,7 @@ span {
   margin-top: 10px;
 }
 
-.card {
+.reviews .card {
   padding: 37px 30px;
   background-color: #502050;
   color: white;
@@ -113,14 +137,14 @@ span {
   border-radius: 8px;
 }
 
-.card__info {
+.reviews .card__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 28px;
 }
 
-.card__img {
+.reviews .card__img {
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -128,30 +152,30 @@ span {
   margin-right: 23px;
 }
 
-.card__img img {
+.reviews .card__img img {
   width: 40px;
   height: 40px;
 }
 
-.card__person .person__name {
+.reviews .card__person .person__name {
   display: block;
   font-weight: 700;
   margin-bottom: 3px;
   color: #f7f2f7;
 }
 
-.card__person .person__status {
+.reviews .card__person .person__status {
   display: block;
   color: #cb7cae;
 }
 
-.card__text {
+.reviews .card__text {
   font-weight: 500;
   color: #f7f2f7;
   line-height: 1.7;
 }
 
-.card--last {
+.reviews .card--last {
   margin-bottom: 0px;
 }
 
@@ -159,6 +183,12 @@ span {
   font-size: 11px;
   text-align: center;
   margin-bottom: 80px;
+}
+
+@media (min-width: 1080px) {
+  .attribution {
+    margin-bottom: 120px;
+  }
 }
 
 .attribution a {

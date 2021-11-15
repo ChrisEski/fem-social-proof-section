@@ -2,6 +2,10 @@
   font-size: 11px;
   text-align: center;
   margin-bottom: 80px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 120px;
+  }
 }
 .attribution a {
   color: $clr-magenta-900;
