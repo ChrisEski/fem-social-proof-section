@@ -78,6 +78,14 @@ span {
 @media (min-width: 1080px) {
   .container {
     margin: 120px 160px 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 1fr 50%;
+        grid-template-rows: auto 1fr 50%;
+        grid-template-areas: 'title stars' 'subtitle stars' 'reviews reviews';
+    row-gap: 12px;
   }
 }
 
@@ -89,6 +97,16 @@ span {
   color: #502050;
 }
 
+@media (min-width: 1080px) {
+  .intro__title {
+    grid-area: title;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 45px;
+    padding-right: 60px;
+  }
+}
+
 .intro_subtitle {
   font-size: 16px;
   text-align: center;
@@ -97,8 +115,25 @@ span {
   line-height: 1.7;
 }
 
+@media (min-width: 1080px) {
+  .intro_subtitle {
+    grid-area: subtitle;
+    margin-bottom: 0;
+    text-align: left;
+    padding-right: 60px;
+  }
+}
+
 .stars {
   margin-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 1080px) {
+  .stars {
+    grid-area: stars;
+  }
 }
 
 .stars__box {
@@ -110,8 +145,45 @@ span {
   border-radius: 8px;
 }
 
+@media (min-width: 1080px) {
+  .stars__box--second {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (min-width: 1080px) {
+  .stars__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    padding: 18px 32px;
+    max-width: 445px;
+  }
+}
+
 .stars__box--last {
   margin-bottom: 0;
+}
+
+@media (min-width: 1080px) {
+  .stars__box--last {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+@media (min-width: 1080px) {
+  .stars__array {
+    height: 20px;
+    margin-right: 32px;
+  }
 }
 
 .stars__icon {
@@ -127,6 +199,18 @@ span {
   font-weight: 700;
   color: #502050;
   margin-top: 10px;
+}
+
+@media (min-width: 1080px) {
+  .stars__description {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .reviews {
+    grid-area: reviews;
+  }
 }
 
 .reviews .card {

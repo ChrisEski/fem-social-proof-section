@@ -1,4 +1,7 @@
 .reviews {
+  @media (min-width: $desktop) {
+    grid-area: reviews;
+  }
   .card {
     // border: 1px solid red;
     padding: 37px 30px;

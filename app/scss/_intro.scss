@@ -4,6 +4,14 @@
   font-size: 40px;
   line-height: 1;
   color: $clr-magenta-900;
+
+  @media (min-width: $desktop) {
+    grid-area: title;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 45px;
+    padding-right: 60px;
+  }
 }
 
 .intro_subtitle {
@@ -12,4 +20,11 @@
   color: $clr-magenta-700;
   margin-bottom: 45px;
   line-height: 1.7;
+
+  @media (min-width: $desktop) {
+    grid-area: subtitle;
+    margin-bottom: 0;
+    text-align: left;
+    padding-right: 60px;
+  }
 }

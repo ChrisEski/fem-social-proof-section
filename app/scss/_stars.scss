@@ -1,6 +1,11 @@
 .stars {
   // border: 1px solid red;
   margin-bottom: 50px;
+  display: grid;
+
+  @media (min-width: $desktop) {
+    grid-area: stars;
+  }
   &__box {
     // border: 1px solid black;
     width: 100%;
@@ -10,13 +15,43 @@
     margin-bottom: 15px;
     border-radius: 8px;
 
+    &--second {
+      @media (min-width: $desktop) {
+        justify-self: center;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding: 18px 32px;
+      max-width: 445px;
+    }
+
     &--last {
       margin-bottom: 0;
+
+      @media (min-width: $desktop) {
+        justify-self: end;
+      }
+    }
+  }
+
+  &__array {
+    // border: 1px solid red;
+
+    @media (min-width: $desktop) {
+      height: 20px;
+      margin-right: 32px;
     }
   }
 
   &__icon {
     margin-right: 3px;
+
+    @media (min-width: $desktop) {
+    }
 
     &--last {
       // margin-bottom: 16px;
@@ -29,6 +64,10 @@
     font-weight: $fw-700;
     color: $clr-magenta-900;
     margin-top: 10px;
+
+    @media (min-width: $desktop) {
+      margin-top: 0;
+    }
   }
 
   &--last {

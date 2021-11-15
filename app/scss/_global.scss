@@ -50,6 +50,13 @@ span {
 
   @media (min-width: $desktop) {
     margin: 120px 160px 20px;
-    // height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 50%;
+    grid-template-areas:
+      'title stars'
+      'subtitle stars'
+      'reviews reviews';
+    row-gap: 12px;
   }
 }
