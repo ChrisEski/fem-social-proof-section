@@ -7,38 +7,6 @@
           box-sizing: border-box;
 }
 
-.flex-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 html {
   font-family: "Spartan", sans-serif;
 }
@@ -77,7 +45,6 @@ span {
 
 @media (min-width: 1080px) {
   .container {
-    margin: 120px 160px 20px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -86,6 +53,8 @@ span {
         grid-template-rows: auto 1fr 50%;
         grid-template-areas: 'title stars' 'subtitle stars' 'reviews reviews';
     row-gap: 12px;
+    width: 80%;
+    margin: 120px 160px 50px;
   }
 }
 
@@ -101,17 +70,17 @@ span {
   .intro__title {
     grid-area: title;
     margin-bottom: 0;
+    padding-right: 60px;
     text-align: left;
     font-size: 45px;
-    padding-right: 60px;
   }
 }
 
 .intro_subtitle {
+  margin-bottom: 45px;
   font-size: 16px;
   text-align: center;
   color: #937b92;
-  margin-bottom: 45px;
   line-height: 1.7;
 }
 
@@ -119,15 +88,15 @@ span {
   .intro_subtitle {
     grid-area: subtitle;
     margin-bottom: 0;
-    text-align: left;
     padding-right: 60px;
+    text-align: left;
   }
 }
 
 .stars {
-  margin-bottom: 50px;
   display: -ms-grid;
   display: grid;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 1080px) {
@@ -137,12 +106,12 @@ span {
 }
 
 .stars__box {
-  width: 100%;
-  text-align: center;
-  padding: 15px 50px;
-  background-color: #f7f2f7;
   margin-bottom: 15px;
+  padding: 15px 50px;
+  width: 100%;
   border-radius: 8px;
+  text-align: center;
+  background-color: #f7f2f7;
 }
 
 @media (min-width: 1080px) {
@@ -163,8 +132,8 @@ span {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    padding: 18px 32px;
     max-width: 445px;
+    padding: 18px 32px;
   }
 }
 
@@ -195,10 +164,10 @@ span {
 }
 
 .stars__description {
+  margin-top: 10px;
   font-size: 13px;
   font-weight: 700;
   color: #502050;
-  margin-top: 10px;
 }
 
 @media (min-width: 1080px) {
@@ -210,15 +179,32 @@ span {
 @media (min-width: 1080px) {
   .reviews {
     grid-area: reviews;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    margin-top: 50px;
+    min-height: 320px;
   }
 }
 
 .reviews .card {
+  margin-bottom: 16px;
   padding: 37px 30px;
+  border-radius: 8px;
   background-color: #502050;
   color: white;
-  margin-bottom: 16px;
-  border-radius: 8px;
+}
+
+@media (min-width: 1080px) {
+  .reviews .card {
+    margin-bottom: 0;
+    min-height: 244px;
+  }
 }
 
 .reviews .card__info {
@@ -231,9 +217,9 @@ span {
 .reviews .card__img {
   width: 40px;
   height: 40px;
+  margin-right: 23px;
   overflow: hidden;
   border-radius: 50%;
-  margin-right: 23px;
 }
 
 .reviews .card__img img {
@@ -243,8 +229,8 @@ span {
 
 .reviews .card__person .person__name {
   display: block;
-  font-weight: 700;
   margin-bottom: 3px;
+  font-weight: 700;
   color: #f7f2f7;
 }
 
@@ -259,19 +245,43 @@ span {
   line-height: 1.7;
 }
 
+@media (min-width: 1080px) {
+  .reviews .card--first {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+@media (min-width: 1080px) {
+  .reviews .card--second {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .reviews .card--last {
   margin-bottom: 0px;
 }
 
+@media (min-width: 1080px) {
+  .reviews .card--last {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
 .attribution {
+  margin-bottom: 80px;
   font-size: 11px;
   text-align: center;
-  margin-bottom: 80px;
 }
 
 @media (min-width: 1080px) {
   .attribution {
-    margin-bottom: 120px;
+    margin-bottom: 70px;
   }
 }
 

@@ -1,14 +1,24 @@
 .reviews {
   @media (min-width: $desktop) {
     grid-area: reviews;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+    margin-top: 50px;
+    min-height: 320px;
   }
   .card {
-    // border: 1px solid red;
+    margin-bottom: 16px;
     padding: 37px 30px;
+    border-radius: 8px;
     background-color: $clr-magenta-900;
     color: $clr-white;
-    margin-bottom: 16px;
-    border-radius: 8px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+      min-height: 244px;
+    }
 
     &__info {
       display: flex;
@@ -19,9 +29,9 @@
       // border: 3px solid white;
       width: 40px;
       height: 40px;
+      margin-right: 23px;
       overflow: hidden;
       border-radius: 50%;
-      margin-right: 23px;
 
       img {
         width: 40px;
@@ -32,8 +42,8 @@
     &__person {
       .person__name {
         display: block;
-        font-weight: $fw-700;
         margin-bottom: 3px;
+        font-weight: $fw-700;
         color: $clr-magenta-400;
       }
 
@@ -49,8 +59,23 @@
       line-height: 1.7;
     }
 
+    &--first {
+      @media (min-width: $desktop) {
+        align-self: start;
+      }
+    }
+
+    &--second {
+      @media (min-width: $desktop) {
+        align-self: center;
+      }
+    }
+
     &--last {
       margin-bottom: 0px;
+      @media (min-width: $desktop) {
+        align-self: end;
+      }
     }
   }
 }

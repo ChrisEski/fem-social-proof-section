@@ -1,19 +1,17 @@
 .stars {
-  // border: 1px solid red;
-  margin-bottom: 50px;
   display: grid;
+  margin-bottom: 50px;
 
   @media (min-width: $desktop) {
     grid-area: stars;
   }
   &__box {
-    // border: 1px solid black;
-    width: 100%;
-    text-align: center;
-    padding: 15px 50px;
-    background-color: $clr-magenta-400;
     margin-bottom: 15px;
+    padding: 15px 50px;
+    width: 100%;
     border-radius: 8px;
+    text-align: center;
+    background-color: $clr-magenta-400;
 
     &--second {
       @media (min-width: $desktop) {
@@ -25,8 +23,8 @@
       display: flex;
       align-items: center;
       justify-content: left;
-      padding: 18px 32px;
       max-width: 445px;
+      padding: 18px 32px;
     }
 
     &--last {
@@ -39,8 +37,6 @@
   }
 
   &__array {
-    // border: 1px solid red;
-
     @media (min-width: $desktop) {
       height: 20px;
       margin-right: 32px;
@@ -54,22 +50,18 @@
     }
 
     &--last {
-      // margin-bottom: 16px;
       margin-right: 0;
     }
   }
 
   &__description {
+    margin-top: 10px;
     font-size: 13px;
     font-weight: $fw-700;
     color: $clr-magenta-900;
-    margin-top: 10px;
 
     @media (min-width: $desktop) {
       margin-top: 0;
     }
-  }
-
-  &--last {
   }
 }
